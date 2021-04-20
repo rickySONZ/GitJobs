@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-    before_action :api_request, only: [:home]
+    # before_action :api_request, only: [:home]
     def new
 
     end
 
     def home
-        
+        api_request
     end
 
 
