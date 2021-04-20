@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  posting_id: MyString
+  url: MyString
+  location: MyString
+  description: MyString
+  company_logo: MyString
+  how_to_apply: MyString
+
+two:
+  title: MyString
+  posting_id: MyString
+  url: MyString
+  location: MyString
+  description: MyString
+  company_logo: MyString
+  how_to_apply: MyString
