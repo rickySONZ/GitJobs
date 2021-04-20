@@ -1,4 +1,5 @@
-<%= image_tag "#{@job.company_logo}", height: 100, width: 100 %><br>
+<%= display_logo(@job) %><br>
 <h1><%= @job.company %> </h1>
+<h5><%= @job.posted_at %></h5>
 <%= @job.title %><br>
 <%= sanitized_description(@job) %>
