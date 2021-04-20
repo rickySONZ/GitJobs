@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2021_04_20_141430) do
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.string "posting_id"
-    t.string "url"
     t.string "location"
     t.string "description"
     t.string "company_logo"
