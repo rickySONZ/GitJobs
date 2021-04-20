@@ -1,4 +1,4 @@
 <% @jobs.each do |job| %>
-    <%= link_to job.title, jobs_path(job) %> -
+    <%= link_to job.title, "/jobs/#{job.id}" %> -
     <%= job.location %><br><br>
 <% end %>

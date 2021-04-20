@@ -1,4 +1,4 @@
 module JobsHelper
 
-    
+
 end

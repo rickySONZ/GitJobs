@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root 'users#home'
   
   resource :users, only: [:new, :create, :index]
+
   get '/jobs' => 'jobs#index'
+  get '/jobs/:id' => 'jobs#show'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   post 'logout' => 'sessions#destroy'
