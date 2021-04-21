@@ -1,3 +1,5 @@
+<h3>Current Job Postings</h3><br><br>
+
 <% @jobs.each do |job| %>
     <%= link_to job.title, "/jobs/#{job.id}" %> -
     <%= job.location %><br><br>
