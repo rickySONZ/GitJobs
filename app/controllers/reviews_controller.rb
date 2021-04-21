@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
 
         @review = Review.new(review_params)
         @review.user_id = current_user.id
-        @review.job_id = @job.id
+        @review.job_id = @job.id if @job
 
         if @review.save
             if @job
@@ -36,6 +36,7 @@ class ReviewsController < ApplicationController
                 redirect_to "/reviews/#{@review.id}"
             end
         else
+            flash[:message] = "Reviews need a title and a description"
             render :new
     end
 end
