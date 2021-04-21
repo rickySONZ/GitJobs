@@ -5,11 +5,17 @@
 <%= @job.title %><br>
 <%= sanitized_description(@job) %>
 
-
-    <%= form_for [@job, @review] do |r| %>
+<h3>Write A New Review About This Position</h3>
+   <p> <%= form_for [@job, @review] do |r| %>
         <%= r.label :title %>
-        <%= r.text_field :title %>
-        <%= r.label :content %>
-        <%= r.text_area :content %>
+        <%= r.text_field :title %><br>
+        <%= r.label :content %><br>
+        <%= r.text_area :content %><br>
     <%= r.submit 'Create Review' %>
-    <% end %>
+    <% end %></p>
+    <h3>Reviews About This Position </h3>
+
+    <p><% @reviews.each do |review| %>
+        <%= review.title %>
+        <%= review.content %><br>
+        <% end %><p>

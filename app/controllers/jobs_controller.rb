@@ -9,6 +9,7 @@ class JobsController < ApplicationController
         redirect_if_not_logged_in
         @job = Job.find(params[:id])
         @review = @job.reviews.build
+        @reviews = @job.reviews
     end
 
     def update
