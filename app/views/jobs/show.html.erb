@@ -4,3 +4,12 @@
 <h5><%= @job.posted_at %></h5>
 <%= @job.title %><br>
 <%= sanitized_description(@job) %>
+
+
+    <%= form_for [@job, @review] do |r| %>
+        <%= r.label :title %>
+        <%= r.text_field :title %>
+        <%= r.label :content %>
+        <%= r.text_area :content %>
+    <%= r.submit 'Create Review' %>
+    <% end %>

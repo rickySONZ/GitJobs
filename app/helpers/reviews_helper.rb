@@ -1,16 +1,13 @@
 module ReviewsHelper
 
-    def index
-
+    def fields_for_helper(f)
+        if @job
+            f.hidden_field :job_id, value: @job.id
+        else
+            render partial: "fields_for", locals: {f: f}
+        end
     end
 
-    def show
-    end
-
-    def new
-    end
     
-    def create
-    end
     
 end

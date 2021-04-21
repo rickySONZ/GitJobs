@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     end
   
     def create
-        
+        api_request
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
@@ -22,5 +22,10 @@ class SessionsController < ApplicationController
         session.delete :user_id
         redirect_to login_path
     end 
+
+    private
+    def api_request
+        Api.pull_new_postings
+    end
 
 end

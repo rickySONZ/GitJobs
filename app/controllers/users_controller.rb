@@ -4,10 +4,6 @@ class UsersController < ApplicationController
 
     end
 
-    def home
-        api_request
-    end
-
 
     def create 
         @user = User.new(user_params)
@@ -27,9 +23,7 @@ class UsersController < ApplicationController
         params.require(:user).permit(:username, :email, :password, :password_confirmation)
     end
 
-    def api_request
-        Api.pull_new_postings
-    end
+    
 
 
 end
