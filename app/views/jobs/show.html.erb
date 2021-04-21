@@ -16,6 +16,8 @@
     <h3>Reviews About This Position </h3>
 
     <p><% @reviews.each do |review| %>
-        <%= review.title %>
-        <%= review.content %><br>
+        <strong><%= review.title %></strong> <%if review.user %>
+        <%= "by #{review.user.username}" %>
+        <%end %> <br>
+        <%= review.content %><br><br>
         <% end %><p>

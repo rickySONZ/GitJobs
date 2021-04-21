@@ -1,4 +1,6 @@
+Reviews for  <%= link_to "#{@job.company} - #{@job.title} located in #{@job.location}", "/jobs/#{@job.id}" %><br><br>
 <% @reviews.each do |review|%>
     Review by <%= review.user.username %> -
+    <%= review.title %> -
     <%= review.content %><br>
     <% end %>
