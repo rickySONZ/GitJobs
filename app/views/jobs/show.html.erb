@@ -15,8 +15,9 @@
     <% end %></p>
     <h4>Reviews About This Position </h4>
     <p><% @reviews.reverse.each do |review| %>
-        <strong><%= review.title %></strong> <%if review.user %>
-        <%= "by #{review.user.username}" %>
-        <%end %> <br>
-        <%= review.content %><br><br>
+        <strong><%= review.title %></strong> <br>
+        <%= review.content %>
+        <%if review.user %><br>
+        <%= "Written by #{review.user.username}" %>
+        <%end %>
         <% end %><p>
