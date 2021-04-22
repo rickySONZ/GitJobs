@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   root 'jobs#index'
   resources :users, only: [:new, :create, :index]
   
-  resources :jobs, only: [:new, :create, :index, :show, :edit, :update]   do
+  resources :jobs, only: [:new, :create, :index, :show, :edit, :update] do
     resources :reviews, only: [:new, :create, :index, :show]
   end
+
+  resources :user_jobs
 
   resources :reviews
 

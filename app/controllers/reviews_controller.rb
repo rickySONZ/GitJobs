@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 
-    before_action :find_job, only: [:index, :new, :create]
+    before_action :find_job, only: [:index, :new, :create, :show]
+   
 
     def show
         @review = Review.find(params[:id])
@@ -50,5 +51,6 @@ end
     def find_job
         @job = Job.find_by_id(params[:job_id])
     end
+
 
 end
