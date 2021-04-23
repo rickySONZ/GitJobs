@@ -12,6 +12,7 @@ class JobsController < ApplicationController
     def show 
         redirect_if_not_logged_in
         @job = Job.find(params[:id])
+        @user_jobs = UserJob.all
         @reviews = @job.reviews
         @review = @job.reviews.build
         if @user_job = UserJob.find_by(job_id: @job.id, user_id: @user.id)

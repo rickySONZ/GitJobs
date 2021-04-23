@@ -1,0 +1,7 @@
+<%= form_for @user_job, url: user_jobs_path, method: :post do |u| %>
+    <%= u.label :interested %>
+    <%= u.check_box :interested, checked: (true if @user_job.interested == true)%><br>
+    <%= u.label :applied %><br>
+    <%= u.check_box :applied, checked: (true if @user_job.interested == true)%><br>
+<%= u.submit 'Save' %>
+<% end %>
