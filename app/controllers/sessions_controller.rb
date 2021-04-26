@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
             flash[:message] = "Welcome to GitJobs!"
             redirect_to '/'
         else
-            flash[:message] = "Invalid login attempt."
+            flash[:message] = "Invalid login attempt. Username and/or password do not match any active accounts."
             render :'/sessions/new'
         end
       end

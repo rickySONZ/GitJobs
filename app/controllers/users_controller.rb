@@ -11,8 +11,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to '/'
         else
-            flash[:error] = "#{@user.errors.full_messages.join(", ")}"
-            redirect_to '/users/new'
+            render :new
         end
     end
 

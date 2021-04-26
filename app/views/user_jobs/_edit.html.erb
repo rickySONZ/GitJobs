@@ -2,8 +2,8 @@
     <%= u.hidden_field :job_id, value: @job.id %>
     <%= u.hidden_field :user_id, value: current_user.id %>
     <%= u.label :interested %>
-    <%= u.check_box :interested, checked: (true if @user_job.interested == true)%><br>
-    <%= u.label :applied %><br>
+    <%= u.check_box :interested, checked: (true if @user_job.interested == true)%>
+    <%= u.label :applied %>
     <%= u.check_box :applied, checked: (true if @user_job.applied == true)%><br>
 <%= u.submit 'Save' %>
 <% end %>

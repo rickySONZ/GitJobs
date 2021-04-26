@@ -37,7 +37,6 @@ class ReviewsController < ApplicationController
                 redirect_to "/reviews/#{@review.id}"
             end
         else
-            flash[:message] = "Reviews need a title and a description"
             render :new
     end
 end

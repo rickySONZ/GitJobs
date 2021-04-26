@@ -1,15 +1,16 @@
+
+
+<%= display_logo(@job) %><br><br>
+<h1><%= @job.company %> </h1>
+<h4><%= @job.title %></h4><br>
 <% if @user_jobs.find_by(job_id: @job.id, user_id: current_user.id) %>
-<% @user_job = @user_jobs.find_by(job_id: @job.id, user_id: current_user.id) %>
+<% @user_job =  @user_jobs.find_by(job_id: @job.id, user_id: current_user.id)%>
 <%= render :partial => "/user_jobs/edit", locals: {user_job: @user_job} %>
 <% else %>
 <% @user_job = UserJob.new %>
 <%= render :partial => "/user_jobs/new", locals: {user_job: @user_job} %>
 <% end %>
 
-
-<%= display_logo(@job) %><br><br>
-<h1><%= @job.company %> </h1>
-<h4><%= @job.title %></h4><br>
 <h5><%= @job.posted_at %></h5>
 <%= @job.title %><br>
 <%= sanitized_description(@job) %>
@@ -27,6 +28,6 @@
         <strong><%= review.title %></strong> <br>
         <%= review.content %>
         <%if review.user %><br>
-        <%= "Written by #{review.user.username}" %>
+        Written by <b><%= review.user.username %></b>
         <%end %>
         <% end %><p>
