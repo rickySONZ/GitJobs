@@ -1,6 +1,10 @@
 module UsersHelper
     
-    def interested?
-        self.user_jobs.where(interested: true)
+    def interest_list
+        current_user.user_jobs.interested?
+    end
+
+    def applied_list
+        current_user.user_jobs.applied?
     end
 end

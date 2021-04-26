@@ -4,6 +4,10 @@ module JobsHelper
         sanitize job.description
     end
 
+    def find_job_from_user_job(uj)
+        Job.find_by_id(uj.job_id).title
+    end
+
     def display_logo(job)
         if job.company_logo == nil
             nil

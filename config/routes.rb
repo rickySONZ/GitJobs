@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root 'jobs#index'
+  root 'users#home'
   resources :users, only: [:new, :create, :index]
   
   resources :jobs, only: [:new, :create, :index, :show, :edit, :update] do
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :user_jobs
 
   resources :reviews
+
+  get '/home' => 'users#home'
 
 
   get '/login' => 'sessions#new'

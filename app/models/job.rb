@@ -9,4 +9,6 @@ class Job < ApplicationRecord
     validates :posting_id, uniqueness: true
 
     
+
+    
 end

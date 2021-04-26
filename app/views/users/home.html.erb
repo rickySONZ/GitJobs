@@ -1,6 +1,10 @@
 <br><br><br>
+<h4>Jobs You Are Interested In </h4><br>
+<% interest_list.each do |uj| %>
+    <%= link_to find_job_from_user_job(uj), "/jobs/#{uj.job_id}" %><br>
+<%end%>
 
-
-
-
-<%= session[:user_id] %>
+<h4>Jobs You Are Applying To</h4><br>
+<% applied_list.each do |uj| %>
+    <%= link_to find_job_from_user_job(uj), "/jobs/#{uj.job_id}" %><br>
+<%end%>
