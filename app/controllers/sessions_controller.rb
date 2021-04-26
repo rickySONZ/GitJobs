@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
             redirect_to '/'
         else
             flash[:message] = "Invalid login attempt. Username and/or password do not match any active accounts."
-            render :'/sessions/new'
+            render :new
         end
       end
   
