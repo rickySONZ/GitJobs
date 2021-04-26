@@ -1,6 +1,6 @@
 <h1>Create Account</h1>
 <br>
-<div class="field_with_errors">
+
 <%= form_for :user, url: '/users' do |f| %>
     Username: <%= f.text_field :username %><br>
     Email: <%= f.text_field :email %><br>
@@ -8,4 +8,3 @@
     Password Confirmation: <%= f.password_field :password_confirmation %><br>
     <%= f.submit "Submit" %>
   <% end %> 
-  </div>
