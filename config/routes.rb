@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get '/home' => 'users#home'
 
-
+  get '/auth/:provider/callback', to: 'sessions#omniauth'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   post 'logout' => 'sessions#destroy'

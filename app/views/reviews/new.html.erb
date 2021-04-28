@@ -1,5 +1,5 @@
 
-
+<%= render partial: 'errors/errors', locals: {model: @review} %>
 <%= form_with(model: [@job, @review]) do |f| %>
     <%= f.label :title %>
     
