@@ -8,9 +8,34 @@
     float: right;
 }
 
+div.container-fluid {
+    padding-left: 2%;
+}
+
+div.container-fluid a.review_index_title_link {
+    color: green;
+}
+
 a:link {
     text-decoration: none;
+    color: darkslategrey;
+    background-color: transparent;
     
+}
+
+div.container-fluid a {
+    color: green;
+    
+}
+
+div.container-fluid a:hover{
+    color: limegreen;
+}
+
+
+
+a.nav-link {
+    color: darkslategrey;
 }
 
 
@@ -22,4 +47,8 @@ input[type=submit], input[type=reset] {
     padding: 5px 10px;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  div.container-fluid a.navbar-brand {
+      color: green;
   }

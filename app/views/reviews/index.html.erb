@@ -1,4 +1,5 @@
-<h4>Review For <%= link_to @job.title, job_path(@job) %> at <%= @job.company%> </h4>
+<h4>Review For <%= link_to @job.title, job_path(@job), class: "review_index_title_link" %><br>
+ <%= @job.company%> </h4>
 <%= display_logo(@job) %>
 <br><br>
 <% @reviews.each do |review|%>
