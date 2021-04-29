@@ -1,5 +1,5 @@
 <%= button_to "Jobs You Have Saved", home_path, :method => "get", class: "home_buttons"%>
-<h3>Current Job Postings</h3><br>
+<h3>Current Job Postings</h3>
 
 <% @jobs.reverse.each do |job| %>
     <%= link_to "#{job.company} - #{job.title}", "/jobs/#{job.id}" %><br>
