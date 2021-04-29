@@ -3,3 +3,22 @@
     background-color: red;
     display: table;
 }
+
+a:link {
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: purple;
+}
+
+input[type=submit], input[type=reset] {
+    background-color:  green;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }

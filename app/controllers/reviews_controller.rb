@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 
-    before_action :find_job, only: [:index, :new, :create, :show]
+    before_action :find_job, only: [:index, :new, :create, :show, :edit, :update]
    
 
     def show

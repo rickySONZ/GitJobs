@@ -1,6 +1,7 @@
 <%= @review.title %>
 <%= @review.content %>
 
+<% if !not_authorized %>
 <%= link_to 'Edit', edit_review_path(@review) %>
 <%= link_to "Delete Review", review_path(@review), method: "delete" %>
-
+<% end %>

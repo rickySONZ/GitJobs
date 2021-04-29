@@ -1,5 +1,3 @@
-
-
 <%= display_logo(@job) %><br><br>
 <h1><%= @job.company %> </h1>
 <h4><%= @job.title %></h4><br>
@@ -24,10 +22,10 @@
     <%= r.submit 'Create Review' %>
     <% end %></p>
     <h4>Reviews About This Position </h4>
-    <p><% @reviews.reverse.each do |review| %>
-        <strong><%= review.title %></strong> <br>
+    <% @reviews.reverse.each do |review| %>
+        <%= link_to review.title, "/reviews/#{review.id}" %><br>
         <%= review.content %>
         <%if review.user %><br>
-        Written by <b><%= review.user.username %></b>
+        Written by <b><%= review.user.username %></b><br>
         <%end %>
-        <% end %><p>
+        <% end %>
