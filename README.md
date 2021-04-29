@@ -1,24 +1,22 @@
-# README
+# GitJobs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GitJobs is rails application that allows users to pull jobs from a page in GitJobs. From there the application gives them the option to write a review about the job or indicate whether they are interested in applying or leaving a review about the position.
 
-Things you may want to cover:
+* Ruby 2.6.1
 
-* Ruby version
+#Installation
+Fork and clone this repository.
+Run bundle install to ensure all gems are installed.
+Run rails s to start server and Control + C to stop.
 
-* System dependencies
+#Usage
+Navigate to http://localhost:3000/
+Follow posted video below for site navigation.
 
-* Configuration
+#Contributing
+Pull requests and bug reports are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Database creation
+Please make sure to update tests as appropriate.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#License
+MIT
