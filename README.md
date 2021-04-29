@@ -9,11 +9,11 @@ Fork and clone this repository.
 Run bundle install to ensure all gems are installed.
 Run rails s to start server and Control + C to stop.
 
-#Usage
+# Usage
 Navigate to http://localhost:3000/
 Follow posted video below for site navigation.
 
-#Contributing
+# Contributing
 Pull requests and bug reports are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
