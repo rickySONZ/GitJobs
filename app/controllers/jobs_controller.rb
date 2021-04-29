@@ -1,8 +1,11 @@
 class JobsController < ApplicationController
 
     before_action :find_user, only: [:show, :index]
-    # before_action :find_user_job, only: [:show]
 
+    def search
+        @jobs = Job.search(params[:location])
+        render :index
+    end
 
     def index
         redirect_if_not_logged_in

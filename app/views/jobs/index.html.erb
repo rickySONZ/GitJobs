@@ -2,6 +2,7 @@
 <h3>Current Job Postings</h3><br>
 
 <% @jobs.reverse.each do |job| %>
-    <%= link_to "#{job.company} - #{job.title} located in #{job.location}", "/jobs/#{job.id}" %>
+    <%= link_to "#{job.company} - #{job.title}", "/jobs/#{job.id}" %><br>
+    <%= "Located in #{job.location}" %>
     <br><br>
 <% end %>

@@ -1,4 +1,5 @@
 class UserJob < ApplicationRecord
+    
     belongs_to :job
     belongs_to :user
 
@@ -6,5 +7,4 @@ class UserJob < ApplicationRecord
 
     scope :applied?, -> { where(applied: true)}
 
-    
 end

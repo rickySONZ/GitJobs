@@ -1,4 +1,7 @@
-<%= @review.title %>
+<h4>Review For <%= link_to @review.job.title, job_path(@review.job.id) %> at <%= @review.job.company%> </h4>
+<%= display_logo(@review.job) %>
+<h5><%= @review.title %></h5>
+<strong><%="By #{@review.user.username}"%></strong><br>
 <%= @review.content %>
 
 <% if !not_authorized %>

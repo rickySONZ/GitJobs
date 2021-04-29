@@ -1,7 +1,9 @@
-Reviews for  <%= link_to "#{@job.company} - #{@job.title} located in #{@job.location}", "/jobs/#{@job.id}" %><br><br>
+<h4>Review For <%= link_to @job.title, job_path(@job) %> at <%= @job.company%> </h4>
+<%= display_logo(@job) %>
+<br><br>
 <% @reviews.each do |review|%>
-    Review by <%= review.user.username %> -
-    <%= link_to review.title, "/reviews/#{review.id}" %> -
-    <%= review.content %>
+    <strong><%= link_to review.title, "/reviews/#{review.id}" %></strong><br>
+    <%= review.content %><br>
+    <strong>Review by <%= review.user.username %></strong>
 
     <% end %>

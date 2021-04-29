@@ -4,21 +4,15 @@
     display: table;
 }
 
-.container-fluid {
-    
-}
-
 .home_buttons {
     float: right;
 }
 
 a:link {
     text-decoration: none;
+    
 }
 
-a:hover {
-    color: purple;
-}
 
 input[type=submit], input[type=reset] {
     background-color:  green;

@@ -7,8 +7,5 @@ class Job < ApplicationRecord
 
     validates :title, presence: true
     validates :posting_id, uniqueness: true
-
-    
-
     
 end
