@@ -23,9 +23,11 @@
     <% end %></p>
     <h4>Reviews About This Position </h4>
     <% @reviews.reverse.each do |review| %>
-        <%= link_to review.title, "/reviews/#{review.id}" %><br>
-        <%= review.content %>
-        <%if review.user %><br>
+        <% if review.id %>
+            <%= link_to review.title, job_review_path(@job, review) %><br>
+            <%= review.content %><br>
+        <%if review.user %>
         Written by <b><%= review.user.username %></b><br>
         <%end %>
+        <% end %>
         <% end %>
