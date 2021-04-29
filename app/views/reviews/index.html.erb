@@ -4,6 +4,6 @@
 <% @reviews.each do |review|%>
     <strong><%= link_to review.title, "/reviews/#{review.id}" %></strong><br>
     <%= review.content %><br>
-    <strong>Review by <%= review.user.username %></strong>
+    <strong>Review by <%= review.user.username %></strong><br><br>
 
     <% end %>

@@ -10,7 +10,7 @@ Run bundle install to ensure all gems are installed.
 Run rails s to start server and Control + C to stop.
 
 # Usage
-Navigate to http://localhost:3000/
+Navigate to http://localhost:3000/ .
 Follow posted video below for site navigation.
 
 # Contributing
@@ -18,5 +18,5 @@ Pull requests and bug reports are welcome. For major changes, please open an iss
 
 Please make sure to update tests as appropriate.
 
-#License
+# License
 MIT
