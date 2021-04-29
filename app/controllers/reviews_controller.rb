@@ -41,6 +41,37 @@ class ReviewsController < ApplicationController
     end
 end
 
+def edit 
+    @review = Review.find_by_id(params[:id])
+    if not_authorized
+        redirect_if_not_authorized
+        flash[:message] = "I'm sorry but you can only edit reviews made by your account"
+    end
+end
+
+def update 
+    @review = Review.find_by_id(params[:id])
+    @review.update(review_params)
+
+    if @review.valid?
+        redirect_to review_path(@review)
+    else
+        render :edit
+    end
+end
+
+def destroy
+    @review = Review.find_by_id(params[:id])
+    if not_authorized
+        flash[:message] = "I'm sorry but you can only edit reviews made by your account."
+        redirect_if_not_authorized
+    else
+        @review.destroy
+        flash[:message] = "Your review has been deleted successfully"
+        redirect_to '/'
+    end
+end
+
     private
 
     def review_params

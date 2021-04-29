@@ -1,2 +1,6 @@
 <%= @review.title %>
 <%= @review.content %>
+
+<%= link_to 'Edit', edit_review_path(@review) %>
+<%= link_to "Delete Review", review_path(@review), method: "delete" %>
+
