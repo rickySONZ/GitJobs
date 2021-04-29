@@ -4,9 +4,16 @@
     display: table;
 }
 
+.container-fluid {
+    
+}
+
+.home_buttons {
+    float: right;
+}
+
 a:link {
     text-decoration: none;
-
 }
 
 a:hover {

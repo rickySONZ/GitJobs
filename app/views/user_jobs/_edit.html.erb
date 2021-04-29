@@ -4,6 +4,6 @@
     <%= u.label :interested %>
     <%= u.check_box :interested, checked: (true if @user_job.interested == true)%>
     <%= u.label :applied %>
-    <%= u.check_box :applied, checked: (true if @user_job.applied == true)%><br>
+    <%= u.check_box :applied, checked: (true if @user_job.applied == true)%>
 <%= u.submit 'Save' %>
 <% end %>
