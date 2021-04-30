@@ -1,11 +1,10 @@
 
 <%= render partial: 'errors/errors', locals: {model: @review} %>
 <%= form_with(model: [@job, @review]) do |f| %>
-    <%= f.label :title %>
-    
+    <%= f.label :title %><br>
     <%= f.text_field :title %><br>
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-    <%= fields_for_helper(f) %><br>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %><br>
+    <%= fields_for_helper(f) %><br><br>
     <%= f.submit 'Create Review' %>
     <% end %>

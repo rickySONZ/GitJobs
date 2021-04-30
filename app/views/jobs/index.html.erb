@@ -1,4 +1,5 @@
-<%= button_to "Jobs You Have Saved", home_path, :method => "get", class: "home_buttons"%>
+<br><%= button_to "Jobs You Have Saved", home_path, :method => "get", class: "home_buttons"%>
+<%= button_to "Write a New Review", new_review_path, :method => "get" %><br>
 <h3>Current Job Postings</h3>
 
 <% @jobs.reverse.each do |job| %>

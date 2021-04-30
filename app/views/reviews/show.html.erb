@@ -5,6 +5,6 @@
 <%= @review.content %>
 
 <% if !not_authorized %>
-<%= button_to 'Edit', edit_review_path(@review), :method => "get" %>
+<br><%= button_to 'Edit', edit_review_path(@review), :method => "get" %><br>
 <%= button_to "Delete Review", review_path(@review), method: "delete" %>
 <% end %>

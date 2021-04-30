@@ -1,11 +1,20 @@
-<%= button_to "Check Out New Job Postings", jobs_path, :method => "get", class: "home_buttons" %>
+<br><%= button_to "Check Out New Job Postings", jobs_path, :method => "get", class: "home_buttons" %>
+<%= button_to "Write a New Review", new_review_path, :method => "get" %>
 <br>
-<h4>Jobs You Are Interested In </h4>
+<% if interest_list.empty? %>
+<h5>Interest List is empty, please visit Job Postings Page</h5>
+<% else %>
+<h4>Jobs You Interested in</h4>
 <% interest_list.each do |uj| %>
     <%= link_to find_job_from_user_job(uj), "/jobs/#{uj.job_id}" %><br>
-<%end%>
-
+<% end %>
+<% end %>
+<br>
+<% if applied_list.empty? %>
+<h5>Application List is empty, please visit Job Postings Page</h5>
+<% else %>
 <h4>Jobs You Are Applying To</h4>
 <% applied_list.each do |uj| %>
     <%= link_to find_job_from_user_job(uj), "/jobs/#{uj.job_id}" %><br>
-<%end%>
+<% end %>
+<% end %>
