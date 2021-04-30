@@ -52,3 +52,11 @@ input[type=submit], input[type=reset] {
   div.container-fluid a.navbar-brand {
       color: green;
   }
+
+  div.container-fluid a.nav-link{
+    color: darkslategrey;
+}
+
+a.navbar-brand{
+    color: green;
+}
