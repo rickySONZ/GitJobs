@@ -63,7 +63,7 @@ end
 def destroy
     @review = Review.find_by_id(params[:id])
     if not_authorized
-        flash[:message] = "I'm sorry but you can only edit reviews made by your account."
+        flash[:message] = "I'm sorry but you can only delete reviews made by your account."
         redirect_if_not_authorized
     else
         @review.destroy
