@@ -1,10 +1,10 @@
 module UsersHelper
     
     def interest_list
-        current_user.user_jobs.interested?
+        current_user.user_jobs.interested? if current_user
     end
 
     def applied_list
-        current_user.user_jobs.applied?
+        current_user.user_jobs.applied? if current_user
     end
 end

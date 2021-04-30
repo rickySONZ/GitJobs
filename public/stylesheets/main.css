@@ -10,6 +10,7 @@
 
 div.container-fluid {
     padding-left: 2%;
+    padding-right: 10%;
 }
 
 div.container-fluid a.review_index_title_link {
@@ -60,3 +61,4 @@ input[type=submit], input[type=reset] {
 a.navbar-brand{
     color: green;
 }
+

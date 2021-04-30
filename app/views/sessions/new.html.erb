@@ -1,8 +1,8 @@
 <h1>Login</h1>
 
 <%= form_with url: '/login', method: :post do |f| %>
-    Username: <%= f.text_field :username %><br><br>
-    Password: <%= f.password_field :password %><br><br>
+    Username: <%= f.text_field :username, class: "form-control" %><br><br>
+    Password: <%= f.password_field :password, class: "form-control"%><br><br>
     <%= f.submit "Submit" %>
   <% end %> 
   <br>
