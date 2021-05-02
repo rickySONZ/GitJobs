@@ -15,13 +15,8 @@
 <%= sanitized_description(@job) %>
 
 <h4>Write A New Review About This Position</h4>
-   <p> <%= form_for [@job, @review] do |r| %>
-        <%= r.label :title %>
-        <%= r.text_field :title %><br>
-        <%= r.label :content %><br>
-        <%= r.text_area :content %><br>
-    <%= r.submit 'Create Review' %>
-    <% end %></p>
+<%= render :partial => "/reviews/form", locals: {review: @review}, method: "post" %>
+
     <h4>Reviews About This Position </h4>
     <% @reviews.reverse.each do |review| %>
         <% if review.id %>
