@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 
-    before_action :find_job, only: [:index, :new, :create, :show, :edit, :update]
+    before_action :find_job
    
 
     def show
@@ -43,6 +43,8 @@ end
 
 def edit 
     @review = Review.find_by_id(params[:id])
+    @job = Job.find_by_id(@review.user_id)
+    
     if not_authorized
         redirect_if_not_authorized
         flash[:message] = "I'm sorry but you can only edit reviews made by your account"

@@ -28,7 +28,6 @@ class SessionsController < ApplicationController
         end
 
         if @user.valid?
-            flash[:message] = "Signed In With Google"
             session[:user_id] = @user.id
             redirect_to '/'
         else
