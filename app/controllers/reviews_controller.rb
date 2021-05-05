@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 
     before_action :find_job
+    before_action :redirect_if_not_logged_in
    
 
     def show

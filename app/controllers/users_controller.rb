@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
     def new
+        redirect_if_logged_in
     end
 
     def create 
@@ -12,6 +13,11 @@ class UsersController < ApplicationController
             render :new
         end
     end
+
+    def home
+        redirect_if_not_logged_in
+    end
+
 
     private
 

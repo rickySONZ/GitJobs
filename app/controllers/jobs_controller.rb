@@ -1,16 +1,15 @@
 class JobsController < ApplicationController
 
     before_action :find_user, only: [:show, :index]
+    before_action :redirect_if_not_logged_in
 
   
 
     def index
-        redirect_if_not_logged_in
         @jobs = Job.all
     end
 
     def show 
-        redirect_if_not_logged_in
         @job = Job.find(params[:id])
         @user_jobs = UserJob.all
         @reviews = @job.reviews
