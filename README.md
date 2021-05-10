@@ -12,6 +12,7 @@ Run rails s to start server and Control + C to stop.
 # Usage
 Navigate to http://localhost:3000/ .
 Follow posted video below for site navigation.
+https://www.loom.com/share/95f9db7e28094befb323198e2019217f
 
 # Contributing
 Pull requests and bug reports are welcome. For major changes, please open an issue first to discuss what you would like to change.
